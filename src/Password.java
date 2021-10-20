@@ -1,5 +1,4 @@
 import exceptii.*;
-
 import java.util.Scanner;
 
 public class Password implements PasswordMinimumRequirements{

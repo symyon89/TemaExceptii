@@ -11,7 +11,7 @@ public class Account {
     @Override
     public String toString() {
         return "Datele tale sunt :" +
-                "password=" + user.getUser() +
-                ", user=" + password.getPassword();
+                "user=" + user.getUser() +
+                ", parola=" + password.getPassword();
     }
 }
