@@ -17,11 +17,8 @@ public class User implements UserMinimumRequirements {
         try{
             checkMinimulLenght();
             checkMaximumLenght();
-        }catch (MinimumLenghtException min){
+        }catch (MinimumLenghtException | MaximumLenghtException min){
             System.out.println(min.getMessage());
-            insertUser();
-        }catch (MaximumLenghtException max){
-            System.out.println(max.getMessage());
             insertUser();
         }
     }
