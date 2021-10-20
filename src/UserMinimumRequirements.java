@@ -1,7 +1,7 @@
-import exceptii.MaximumLenghtException;
-import exceptii.MinimumLenghtException;
+import exceptii.MaximumLengthException;
+import exceptii.MinimumLengthException;
 
 public interface UserMinimumRequirements {
-    void checkMinimulLenght() throws MinimumLenghtException;
-    void checkMaximumLenght() throws MaximumLenghtException;
+    void checkMinimulLength() throws MinimumLengthException;
+    void checkMaximumLength() throws MaximumLengthException;
 }

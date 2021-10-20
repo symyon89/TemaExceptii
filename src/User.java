@@ -1,6 +1,5 @@
-import exceptii.MaximumLenghtException;
-import exceptii.MinimumLenghtException;
-
+import exceptii.MaximumLengthException;
+import exceptii.MinimumLengthException;
 import java.util.Scanner;
 
 public class User implements UserMinimumRequirements {
@@ -15,25 +14,29 @@ public class User implements UserMinimumRequirements {
 
     public void checkUser() {
         try{
-            checkMinimulLenght();
-            checkMaximumLenght();
-        }catch (MinimumLenghtException | MaximumLenghtException min){
-            System.out.println(min.getMessage());
+            checkMinimulLength();
+            checkMaximumLength();
+        }catch (MinimumLengthException | MaximumLengthException e){
+            System.out.println(e.getMessage());
             insertUser();
         }
     }
 
     @Override
-    public void checkMinimulLenght() throws MinimumLenghtException {
+    public void checkMinimulLength() throws MinimumLengthException {
          if(user.length() < 4){
-             throw new MinimumLenghtException();
+             throw new MinimumLengthException("Userul nu poate avea mai putin de 4 caractere");
          }
     }
 
     @Override
-    public void checkMaximumLenght() throws MaximumLenghtException {
+    public void checkMaximumLength() throws MaximumLengthException {
         if(user.length() > 15){
-            throw new MaximumLenghtException();
+            throw new MaximumLengthException();
         }
+    }
+
+    public String getUser() {
+        return user;
     }
 }
