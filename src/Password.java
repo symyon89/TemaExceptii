@@ -1,13 +1,20 @@
 import exceptii.*;
+
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Password implements PasswordMinimumRequirements{
     String password;
+    List<String> passwordList = new ArrayList<>();
+
+
     public void insertPassword(){
         Scanner scannerText = new Scanner(System.in);
         System.out.println("Introdu parola");
         password = scannerText.nextLine();
         checkPassword();
+        passwordList.add(password);
     }
     public void checkPassword(){
         try {
