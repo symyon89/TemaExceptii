@@ -25,8 +25,8 @@ public class Account {
     }
 
     public  void showAccountList() {
-        System.out.println("lista de useri si parole este : ");
-       Set<String> userList = user.getUserList();
+        System.out.println("Lista de useri si parole este : ");
+        Set<String> userList = user.getUserList();
         for (String userKey : userList) {
             String userPassword = accountList.get(userKey);
             System.out.println("User : " + userKey + " Parola : " + userPassword);
